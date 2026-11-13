@@ -13,9 +13,16 @@ export default function HeroSection({ onSearchSerial }) {
 
   return (
     <section className="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-24 border-b border-[#EAE2D5]">
+      {/* Background image & overlay */}
+      <div 
+        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('/Herbal Comfort Insole and Sneaker.png')` }}
+      />
+      <div className="absolute inset-0 -z-10 bg-[#F7F4EC]/88 backdrop-blur-[2px]"></div>
+
       {/* Background organic blur gradients */}
-      <div className="absolute top-0 right-10 -z-10 w-96 h-96 bg-[#E3ECD7]/60 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 left-10 -z-10 w-80 h-80 bg-[#EEDFC6]/50 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-10 -z-10 w-96 h-96 bg-[#E3ECD7]/50 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 left-10 -z-10 w-80 h-80 bg-[#EEDFC6]/40 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -115,9 +122,6 @@ export default function HeroSection({ onSearchSerial }) {
                 {/* Product Badge */}
                 <div className="flex items-center justify-between pb-4 border-b border-[#E3D7C4]">
                   <div>
-                    <span className="text-[11px] uppercase tracking-widest text-[#6E7E70] font-semibold">
-                      Thiết kế thử nghiệm R&D
-                    </span>
                     <h3 className="font-serif text-2xl font-bold text-[#1E3126]">
                       HERBFOOT WARM
                     </h3>
