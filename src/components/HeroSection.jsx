@@ -14,13 +14,14 @@ export default function HeroSection({ onSearchSerial }) {
 
   return (
     <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-[#EAE2D5]">
-      {/* Background image trực tiếp toàn bộ Hero section */}
-      <div 
-        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBgImage})` }}
+      {/* Background image trực tiếp rõ ràng 100% */}
+      <img 
+        src={heroBgImage} 
+        alt="HERBFOOT background" 
+        className="absolute inset-0 -z-20 w-full h-full object-cover object-center" 
       />
-      {/* Lớp phủ chuyển màu dịu để đảm bảo đọc rõ chữ */}
-      <div className="absolute inset-0 -z-10 bg-[#F7F4EC]/85 lg:bg-linear-to-r lg:from-[#F7F4EC]/95 lg:via-[#F7F4EC]/85 lg:to-[#F7F4EC]/65 backdrop-blur-[1px]" />
+      {/* Lớp phủ chuyển màu sáng trong suốt */}
+      <div className="absolute inset-0 -z-10 bg-white/70 lg:bg-linear-to-r lg:from-[#F7F4EC]/90 lg:via-[#F7F4EC]/75 lg:to-transparent" />
 
       {/* Background organic blur gradients */}
       <div className="absolute top-0 right-10 -z-10 w-96 h-96 bg-[#E3ECD7]/50 rounded-full blur-3xl pointer-events-none"></div>
