@@ -13,12 +13,12 @@ export default function HeroSection({ onSearchSerial }) {
 
   return (
     <section className="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-24 border-b border-[#EAE2D5]">
-      {/* Background image & overlay */}
+      {/* Background image with visible presence */}
       <div 
-        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('/Herbal Comfort Insole and Sneaker.png')` }}
+        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat opacity-40"
+        style={{ backgroundImage: `url('/hero-bg.png')` }}
       />
-      <div className="absolute inset-0 -z-10 bg-[#F7F4EC]/88 backdrop-blur-[2px]"></div>
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#F7F4EC]/75 via-[#F7F4EC]/85 to-[#F7F4EC]"></div>
 
       {/* Background organic blur gradients */}
       <div className="absolute top-0 right-10 -z-10 w-96 h-96 bg-[#E3ECD7]/50 rounded-full blur-3xl pointer-events-none"></div>
@@ -132,31 +132,20 @@ export default function HeroSection({ onSearchSerial }) {
                 </div>
 
                 {/* Conceptual Product Image Display */}
-                <div className="my-6 relative rounded-2xl overflow-hidden bg-radial from-[#F5F1E8] to-[#DDD2BE] p-8 border border-[#D8CBB3] flex flex-col items-center justify-center min-h-[260px] text-center">
+                <div className="my-6 relative rounded-2xl overflow-hidden border border-[#D8CBB3] shadow-md group">
+                  <img 
+                    src="/hero-bg.png" 
+                    alt="Herbal Comfort Insole and Sneaker" 
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                   
-                  {/* Stylized botanical insoles illustration */}
-                  <div className="relative w-44 h-56 bg-linear-to-b from-[#2D4A3E] via-[#3E6554] to-[#253D32] rounded-t-full rounded-b-3xl shadow-2xl flex flex-col items-center justify-between p-4 text-[#F4EFE6] border-2 border-[#8CA58A]/50">
-                    <div className="w-12 h-1 bg-[#8CA58A]/60 rounded-full mt-2"></div>
-                    <div className="space-y-1">
-                      <div className="w-10 h-10 mx-auto rounded-full bg-[#1E332B] flex items-center justify-center border border-[#8CA58A]/40">
-                        <Sparkles className="w-5 h-5 text-[#CBE2C8]" />
-                      </div>
-                      <div className="text-[10px] tracking-widest uppercase font-semibold text-[#D4E8D2]">
-                        HERBFOOT WARM
-                      </div>
-                      <div className="text-[9px] text-[#A6C0A3]">Lớp xơ Chitosan + Thảo mộc</div>
-                    </div>
-                    <div className="text-[8px] text-[#A4BCA1] tracking-wider uppercase border-t border-[#4E7562] pt-2 w-full">
-                      Mặt dán đáy giày • Air Warmth
-                    </div>
-                  </div>
-
                   {/* Botanical accents around */}
-                  <div className="absolute top-4 left-4 bg-white/80 backdrop-blur-xs px-2.5 py-1 rounded-full text-[10px] font-medium text-[#294235] border border-[#D5C6AE] shadow-xs">
+                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs px-2.5 py-1 rounded-full text-[10px] font-medium text-[#294235] border border-[#D5C6AE] shadow-xs">
                     Chiết xuất gừng & quế
                   </div>
-                  <div className="absolute bottom-4 right-4 bg-white/80 backdrop-blur-xs px-2.5 py-1 rounded-full text-[10px] font-medium text-[#294235] border border-[#D5C6AE] shadow-xs">
-                    Màng Chitosan kháng khuẩn dự kiến
+                  <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-xs px-2.5 py-1 rounded-full text-[10px] font-medium text-[#294235] border border-[#D5C6AE] shadow-xs">
+                    Màng Chitosan kháng khuẩn
                   </div>
                 </div>
 
