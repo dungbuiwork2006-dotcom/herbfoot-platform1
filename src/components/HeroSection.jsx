@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, QrCode, Sparkles, Shield, HeartHandshake, CheckCircle2 } from 'lucide-react';
+import heroBgImage from '../assets/hero-bg.png';
 
 export default function HeroSection({ onSearchSerial }) {
   const [quickSerial, setQuickSerial] = useState('');
@@ -12,13 +13,14 @@ export default function HeroSection({ onSearchSerial }) {
   };
 
   return (
-    <section className="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-24 border-b border-[#EAE2D5]">
-      {/* Background image with visible presence */}
+    <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-[#EAE2D5]">
+      {/* Background image trực tiếp toàn bộ Hero section */}
       <div 
-        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat opacity-40"
-        style={{ backgroundImage: `url('/hero-bg.png')` }}
+        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBgImage})` }}
       />
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-[#F7F4EC]/75 via-[#F7F4EC]/85 to-[#F7F4EC]"></div>
+      {/* Lớp phủ chuyển màu dịu để đảm bảo đọc rõ chữ */}
+      <div className="absolute inset-0 -z-10 bg-[#F7F4EC]/85 lg:bg-linear-to-r lg:from-[#F7F4EC]/95 lg:via-[#F7F4EC]/85 lg:to-[#F7F4EC]/65 backdrop-blur-[1px]" />
 
       {/* Background organic blur gradients */}
       <div className="absolute top-0 right-10 -z-10 w-96 h-96 bg-[#E3ECD7]/50 rounded-full blur-3xl pointer-events-none"></div>
