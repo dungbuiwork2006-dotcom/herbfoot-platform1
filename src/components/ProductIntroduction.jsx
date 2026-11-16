@@ -1,140 +1,332 @@
+
 import React from 'react';
-import { Flame, ShieldCheck, Wind, Clock, Check, AlertCircle } from 'lucide-react';
+import {
+  Leaf,
+  ShieldCheck,
+  Wind,
+  ArrowUpRight,
+  Check,
+  Sparkles,
+  Footprints,
+  Package
+} from 'lucide-react';
 
 export default function ProductIntroduction() {
+  const features = [
+    {
+      icon: <Leaf className="w-5 h-5" />,
+      number: "01",
+      title: "Chiết xuất thảo mộc",
+      desc: "Ứng dụng các thành phần có nguồn gốc thực vật như gừng và quế, mang đến hương thơm thảo mộc đặc trưng."
+    },
+    {
+      icon: <ShieldCheck className="w-5 h-5" />,
+      number: "02",
+      title: "Màng sinh học Chitosan",
+      desc: "Kết hợp lớp màng sinh học Chitosan trong cấu trúc sản phẩm, hướng tới hỗ trợ kiểm soát môi trường bên trong giày."
+    },
+    {
+      icon: <Wind className="w-5 h-5" />,
+      number: "03",
+      title: "Thiết kế mỏng nhẹ",
+      desc: "Cấu trúc gọn nhẹ, dễ bố trí bên trong giày mà không cần thay thế toàn bộ phần lót giày."
+    }
+  ];
+
   const steps = [
     {
       num: "01",
-      title: "Làm sạch lót giày",
-      desc: "Lau sạch bụi bẩn và đảm bảo mặt trong hoặc lót giày khô ráo trước khi dán."
+      title: "Làm sạch vị trí dán",
+      desc: "Đảm bảo mặt trong giày hoặc bề mặt lót giày sạch và khô ráo."
     },
     {
       num: "02",
       title: "Bóc lớp giấy bảo vệ",
-      desc: "Nhẹ nhàng gỡ lớp giấy lót phủ keo acrylic phía mặt dưới của miếng dán."
+      desc: "Nhẹ nhàng bóc lớp giấy bảo vệ keo ở mặt dưới của miếng dán."
     },
     {
       num: "03",
-      title: "Dán cố định vào giày",
-      desc: "Đặt miếng dán vào vị trí nửa trước hoặc hõm bàn chân bên trong giày, ấn miết nhẹ."
+      title: "Đặt miếng dán vào giày",
+      desc: "Dán vào vị trí phù hợp bên trong giày, chẳng hạn khu vực trước bàn chân hoặc hõm bàn chân."
     },
     {
       num: "04",
-      title: "Tận hưởng cảm giác ấm dịu",
-      desc: "Đi tất/vớ bình thường và xỏ giày. Hương thơm thảo mộc và hơi ấm sẽ tỏa nhẹ nhàng."
+      title: "Sử dụng như bình thường",
+      desc: "Ấn nhẹ để cố định miếng dán, sau đó đi tất và sử dụng giày như thường ngày."
     }
   ];
 
   return (
-    <section id="product" className="py-20 bg-[#FBF9F5] border-b border-[#EAE1D3]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-[#5C705F] font-semibold bg-[#EAE2D3] px-3.5 py-1.5 rounded-full border border-[#D8CEBC]">
-            Giải pháp chuyên biệt
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl text-[#1E3125]">
-            HERBFOOT WARM – Miếng dán thảo mộc trong giày
+    <section
+      id="product"
+      className="relative overflow-hidden bg-[#F7F4EC] py-24 sm:py-28"
+    >
+      {/* Background decoration */}
+      <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/40 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-40 -left-32 w-96 h-96 rounded-full bg-[#B9C9B2]/25 blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+        {/* SECTION HEADER */}
+        <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20">
+
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.12] text-[#203A2B]">
+            Chạm vào sự
+            <span className="block italic text-[#66866A] mt-2">
+              ấm lành từ thiên nhiên
+            </span>
           </h2>
-          <p className="text-[#566658] text-base leading-relaxed">
-            Thiết kế giải phẫu học mỏng nhẹ, vừa vặn không gây cộm, phối hợp tác động kép: Giữ ấm thảo dược & Kiểm soát môi trường vi mô bên trong giày.
+
+          <p className="max-w-2xl mx-auto mt-7 text-sm sm:text-base leading-8 text-[#596C5A]">
+            HERBFOOT WARM – Miếng dán thảo mộc sử dụng bên trong giày,
+            kết hợp dịch chiết thực vật và màng sinh học Chitosan
+            trong một thiết kế mỏng nhẹ, tiện lợi.
           </p>
+
         </div>
 
-        {/* Feature Grid & Visual Presentation */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
-          
-          {/* Visual Presentation */}
-          <div className="lg:col-span-6 order-2 lg:order-1">
-            <div className="p-8 sm:p-10 rounded-3xl bg-linear-to-br from-[#EFEAE0] via-[#FAF7F0] to-[#E3DAC8] border border-[#DDD3BF] shadow-lg relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-[#95B291]/20 rounded-full blur-2xl"></div>
-              
-              <div className="space-y-6 relative z-10">
-                <div className="inline-block px-3 py-1 rounded-md bg-[#2D4A3E] text-[#F3EFE6] text-xs font-semibold tracking-wide">
-                  Quy cách: Cặp 2 miếng / Túi chống ẩm
+
+        {/* MAIN PRODUCT PRESENTATION */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+
+          {/* IMAGE AREA */}
+          <div className="lg:col-span-7">
+
+            <div className="relative h-full min-h-[380px] sm:min-h-[500px] rounded-[2rem] overflow-hidden bg-[#DCE5D6] border border-[#C5D2BE]">
+
+              {/* IMAGE PLACEHOLDER */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+
+                <div className="w-16 h-16 rounded-full bg-white/60 flex items-center justify-center mb-5">
+                  <Package className="w-7 h-7 text-[#66836A]" />
                 </div>
 
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#1E3125]">
-                  Thiết kế siêu mỏng 1.8mm, không làm chật cỡ giày
-                </h3>
+                <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-[#66836A]">
+                  Product visual
+                </span>
 
-                <p className="text-sm text-[#4E5E50] leading-relaxed">
-                  HERBFOOT WARM được thiết kế để đặt vừa vặn ngay dưới phần đệm trước hoặc hõm gan bàn chân. Độ dày tinh gọn kết hợp lớp đệm EVA đàn hồi nhẹ giúp bạn bước đi tự nhiên như không mang miếng dán phụ trợ.
+                <p className="mt-3 font-serif text-xl sm:text-2xl text-[#36513A]">
+                  Hình ảnh sản phẩm HERBFOOT WARM
                 </p>
 
-                {/* Expected Benefits */}
-                <div className="space-y-3 pt-2">
-                  <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#3D6652] text-[#F3EFE6] flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="text-sm text-[#273B2E]">
-                      <strong>Ấm dịu sinh lý:</strong> Tác động nhiệt độ ôn hòa từ tinh dầu gừng, quế, không gây bỏng rát hay nóng gắt như hóa chất tổng hợp.
-                    </span>
-                  </div>
+                <p className="mt-2 text-xs sm:text-sm text-[#718271] max-w-xs leading-6">
+                  Khu vực dành cho hình ảnh miếng dán thảo mộc
+                  khi bạn hoàn thiện hình ảnh sản phẩm.
+                </p>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#3D6652] text-[#F3EFE6] flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="text-sm text-[#273B2E]">
-                      <strong>Khử mùi & Hút ẩm:</strong> Màng sinh học Chitosan và tinh chất thảo dược giúp hạn chế mùi hôi chân đặc trưng khi đi giày nhiều giờ.
-                    </span>
-                  </div>
+              </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#3D6652] text-[#F3EFE6] flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="text-sm text-[#273B2E]">
-                      <strong>Thư giãn cơ bắp:</strong> Hương thảo dược tự nhiên xoa dịu đôi chân mỏi sau các buổi tập luyện hoặc ca trực dài.
-                    </span>
-                  </div>
-                </div>
+              {/* Bottom label */}
+              <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-3">
 
-                {/* Important notice */}
-                <div className="p-3.5 rounded-xl bg-[#FAF6EC] border border-[#D5C6AA] flex items-start gap-2.5 text-xs text-[#7A6B48]">
-                  <AlertCircle className="w-4 h-4 shrink-0 text-[#8C7536] mt-0.5" />
-                  <span>
-                    * Lưu ý: Sản phẩm là miếng dán chăm sóc tiện ích hỗ trợ ngoài da, không thay thế các liệu pháp điều trị bệnh lý y khoa.
+                <div className="px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-md border border-white/70">
+                  <span className="text-[10px] sm:text-xs font-medium tracking-wide text-[#36513A]">
+                    HERBFOOT WARM
                   </span>
                 </div>
+
+                <div className="px-4 py-2.5 rounded-full bg-[#294735]/90 backdrop-blur-md">
+                  <span className="text-[10px] sm:text-xs text-[#F5F3E9] tracking-wide">
+                    Botanical innovation
+                  </span>
+                </div>
+
               </div>
+
             </div>
+
           </div>
 
-          {/* How to use */}
-          <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
-            <div className="space-y-2">
-              <span className="text-xs uppercase tracking-widest text-[#667768] font-bold">
-                Hướng dẫn sử dụng
+
+          {/* PRODUCT INFORMATION */}
+          <div className="lg:col-span-5 flex flex-col justify-center">
+
+            <div className="mb-8">
+
+              <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#789078]">
+                About the product
               </span>
-              <h3 className="font-serif text-2xl font-bold text-[#1E3125]">
-                Bốn bước đơn giản để sưởi ấm đôi chân
+
+              <h3 className="font-serif text-3xl sm:text-4xl text-[#203A2B] leading-tight mt-4">
+                Nhỏ gọn trong giày.
+                <span className="block italic text-[#66866A] mt-1">
+                  Dịu nhẹ mỗi bước chân.
+                </span>
               </h3>
+
+              <p className="mt-5 text-sm leading-7 text-[#5B6D5C]">
+                Không phải một chiếc lót giày thông thường,
+                HERBFOOT WARM được phát triển dưới dạng miếng dán
+                thảo mộc riêng biệt, có thể bố trí trực tiếp bên trong giày.
+              </p>
+
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {steps.map((s) => (
-                <div key={s.num} className="p-5 rounded-2xl bg-[#F6F2E9] border border-[#E0D5C3] space-y-2 hover:border-[#ADC2A5] transition-all">
-                  <span className="font-serif text-2xl font-bold text-[#2D4A3E]">
-                    {s.num}
-                  </span>
-                  <h4 className="text-sm font-semibold text-[#1F3327]">
-                    {s.title}
-                  </h4>
-                  <p className="text-xs text-[#58685A] leading-relaxed">
-                    {s.desc}
-                  </p>
+
+            {/* PRODUCT SPECS */}
+            <div className="grid grid-cols-2 gap-3 mb-8">
+
+              <div className="rounded-2xl bg-white/65 border border-[#CFD9C9] p-4">
+                <span className="text-[10px] uppercase tracking-widest text-[#7B8C79]">
+                  Quy cách
+                </span>
+                <p className="mt-2 text-base font-semibold text-[#294735]">
+                  Cặp 2 miếng
+                </p>
+              </div>
+
+              <div className="rounded-2xl bg-white/65 border border-[#CFD9C9] p-4">
+                <span className="text-[10px] uppercase tracking-widest text-[#7B8C79]">
+                  Thiết kế
+                </span>
+                <p className="mt-2 text-base font-semibold text-[#294735]">
+                  Mỏng nhẹ
+                </p>
+              </div>
+
+            </div>
+
+
+            {/* FEATURES */}
+            <div className="space-y-5">
+
+              {features.map((feature) => (
+                <div
+                  key={feature.number}
+                  className="flex items-start gap-4 group"
+                >
+
+                  <div className="w-11 h-11 shrink-0 rounded-xl bg-[#D5E0D0] border border-[#C3D2BE] flex items-center justify-center text-[#426448] group-hover:bg-[#36543E] group-hover:text-white transition-all duration-300">
+                    {feature.icon}
+                  </div>
+
+                  <div className="flex-1 pt-0.5">
+
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-semibold tracking-widest text-[#8B9C86]">
+                        {feature.number}
+                      </span>
+
+                      <h4 className="text-sm font-semibold text-[#294735]">
+                        {feature.title}
+                      </h4>
+                    </div>
+
+                    <p className="mt-1.5 text-xs sm:text-sm leading-6 text-[#637363]">
+                      {feature.desc}
+                    </p>
+
+                  </div>
+
                 </div>
               ))}
+
             </div>
 
-            <div className="p-4 rounded-2xl bg-[#EBE4D5] border border-[#D6C9B3] text-xs text-[#4F5E52] space-y-1">
-              <p className="font-semibold text-[#1F3327]">Khuyến nghị thời gian:</p>
-              <p>Mỗi miếng dán duy trì hiệu quả tỏa hương ấm dịu tối ưu trong khoảng 6 - 8 giờ liên tục. Khuyên dùng một lần trong ngày và thay mới sau mỗi chu kỳ mang giày dài.</p>
+
+            {/* NOTE */}
+            <div className="mt-8 pt-6 border-t border-[#C8D4C3] flex items-start gap-3">
+
+              <Sparkles className="w-4 h-4 shrink-0 mt-0.5 text-[#789078]" />
+
+              <p className="text-[11px] leading-5 text-[#72816F]">
+                Sản phẩm hướng tới mục đích chăm sóc và mang lại trải nghiệm
+                sử dụng tiện lợi, không thay thế các phương pháp điều trị y khoa.
+              </p>
+
             </div>
+
+          </div>
+
+        </div>
+
+
+        {/* DIVIDER */}
+        <div className="flex items-center gap-5 my-20 sm:my-24">
+
+          <div className="h-px flex-1 bg-[#C7D3C1]" />
+
+          <div className="w-10 h-10 rounded-full border border-[#B9C9B3] bg-white/60 flex items-center justify-center">
+            <Footprints className="w-4 h-4 text-[#66836A]" />
+          </div>
+
+          <div className="h-px flex-1 bg-[#C7D3C1]" />
+
+        </div>
+
+
+        {/* HOW TO USE */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+
+          {/* LEFT TITLE */}
+          <div className="lg:col-span-4">
+
+            <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#789078]">
+              Simple application
+            </span>
+
+            <h3 className="font-serif text-3xl sm:text-4xl text-[#203A2B] leading-tight mt-4">
+              Sử dụng dễ dàng
+              <span className="block italic text-[#66866A]">
+                chỉ với 4 bước
+              </span>
+            </h3>
+
+            <p className="mt-5 text-sm leading-7 text-[#637363]">
+              Tối giản thao tác sử dụng để HERBFOOT WARM
+              có thể đồng hành cùng bạn trong những hoạt động thường ngày.
+            </p>
+
+            <div className="mt-8 inline-flex items-center gap-2 text-[#4F704F]">
+              <Check className="w-4 h-4" />
+              <span className="text-xs font-semibold tracking-wide">
+                Nhanh chóng · Tiện lợi · Linh hoạt
+              </span>
+            </div>
+
+          </div>
+
+
+          {/* RIGHT STEPS */}
+          <div className="lg:col-span-8">
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+              {steps.map((step, index) => (
+                <div
+                  key={step.num}
+                  className="relative p-6 sm:p-7 rounded-3xl bg-[#F7F8F3]/80 border border-[#CFD9C9] hover:bg-white hover:-translate-y-1 hover:shadow-lg hover:shadow-[#294735]/5 transition-all duration-300"
+                >
+
+                  <div className="flex items-center justify-between mb-7">
+
+                    <span className="font-serif text-4xl text-[#91A68C]/70">
+                      {step.num}
+                    </span>
+
+                    <div className="w-9 h-9 rounded-full bg-[#E3EBDD] flex items-center justify-center">
+                      <ArrowUpRight className="w-4 h-4 text-[#527052]" />
+                    </div>
+
+                  </div>
+
+                  <h4 className="text-base font-semibold text-[#294735]">
+                    {step.title}
+                  </h4>
+
+                  <p className="mt-3 text-xs sm:text-sm leading-6 text-[#697969]">
+                    {step.desc}
+                  </p>
+
+                  {index < 3 && (
+                    <div className="hidden sm:block absolute -right-2 top-1/2 w-4 h-4 rounded-full bg-[#DCE5D6] border border-[#B9C9B3] z-10" />
+                  )}
+
+                </div>
+              ))}
+
+            </div>
+
           </div>
 
         </div>

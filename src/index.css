@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 @layer base {
@@ -15,17 +16,63 @@
   }
 }
 
-/* Custom subtle scrollbar */
+/* =====================================
+   HERBFOOT - SECTION COLOR SYSTEM
+   ===================================== */
+
+/* Section 4: Botanical Ingredients */
+#ingredients {
+  background-color: #E8EDE3 !important;
+  border-bottom-color: #D4DFCE;
+}
+
+/* Section 5: Product Structure */
+#structure {
+  background-color: #FBF9F5 !important;
+  border-bottom-color: #E8DFD0;
+}
+
+/* Section 6: Chitosan Technology */
+#chitosan {
+  background-color: #EEF2E9 !important;
+  border-bottom-color: #D8E1D2;
+}
+
+/* Section 7: Production Journey */
+#process {
+  background-color: #F7F4EC !important;
+  border-bottom-color: #E5DCCB;
+}
+
+/* Section 8: Quality Assurance */
+#qa {
+  background-color: #E8EDE3 !important;
+  border-bottom-color: #D4DFCE;
+}
+
+/* Section 9: ESG */
+#esg {
+  background-color: #FBF9F5 !important;
+  border-bottom-color: #E8DFD0;
+}
+
+/* =====================================
+   SCROLLBAR
+   ===================================== */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #F4EFE6;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #C4B89B;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #2D4A3E;
 }
