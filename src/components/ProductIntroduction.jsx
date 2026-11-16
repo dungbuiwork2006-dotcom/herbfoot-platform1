@@ -7,8 +7,7 @@ import {
   ArrowUpRight,
   Check,
   Sparkles,
-  Footprints,
-  Package
+  Footprints
 } from 'lucide-react';
 
 export default function ProductIntroduction() {
@@ -56,12 +55,15 @@ export default function ProductIntroduction() {
     }
   ];
 
+  const productImage = `${import.meta.env.BASE_URL}herbfoot-layers.png`;
+
   return (
     <section
       id="product"
       className="relative overflow-hidden bg-[#F7F4EC] py-24 sm:py-28"
     >
-      {/* Background decoration */}
+
+      {/* BACKGROUND DECORATION */}
       <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/40 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-40 -left-32 w-96 h-96 rounded-full bg-[#B9C9B2]/25 blur-3xl pointer-events-none" />
 
@@ -69,7 +71,6 @@ export default function ProductIntroduction() {
 
         {/* SECTION HEADER */}
         <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20">
-
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.12] text-[#203A2B]">
             Chạm vào sự
             <span className="block italic text-[#66866A] mt-2">
@@ -82,42 +83,32 @@ export default function ProductIntroduction() {
             kết hợp dịch chiết thực vật và màng sinh học Chitosan
             trong một thiết kế mỏng nhẹ, tiện lợi.
           </p>
-
         </div>
 
-
         {/* MAIN PRODUCT PRESENTATION */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
           {/* IMAGE AREA */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 w-full">
 
-            <div className="relative h-full min-h-[380px] sm:min-h-[500px] rounded-[2rem] overflow-hidden bg-[#DCE5D6] border border-[#C5D2BE]">
+            <div className="relative w-full aspect-[13/8] rounded-[2rem] overflow-hidden bg-[#DCE5D6] border border-[#C5D2BE] shadow-sm">
 
-              {/* IMAGE PLACEHOLDER */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+              {/* HERBFOOT PRODUCT IMAGE */}
+              <img
+                src={productImage}
+                alt="Cấu trúc các lớp miếng dán thảo mộc HERBFOOT WARM"
+                className="absolute inset-0 z-0 w-full h-full object-cover object-center"
+                loading="eager"
+                onError={(e) => {
+                  console.error(
+                    "Không thể tải ảnh HERBFOOT:",
+                    e.currentTarget.src
+                  );
+                }}
+              />
 
-                <div className="w-16 h-16 rounded-full bg-white/60 flex items-center justify-center mb-5">
-                  <Package className="w-7 h-7 text-[#66836A]" />
-                </div>
-
-                <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-[#66836A]">
-                  Product visual
-                </span>
-
-                <p className="mt-3 font-serif text-xl sm:text-2xl text-[#36513A]">
-                  Hình ảnh sản phẩm HERBFOOT WARM
-                </p>
-
-                <p className="mt-2 text-xs sm:text-sm text-[#718271] max-w-xs leading-6">
-                  Khu vực dành cho hình ảnh miếng dán thảo mộc
-                  khi bạn hoàn thiện hình ảnh sản phẩm.
-                </p>
-
-              </div>
-
-              {/* Bottom label */}
-              <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-3">
+              {/* BOTTOM LABEL */}
+              <div className="absolute z-10 bottom-4 sm:bottom-5 left-4 sm:left-5 right-4 sm:right-5 flex items-center justify-between gap-3">
 
                 <div className="px-4 py-2.5 rounded-full bg-white/80 backdrop-blur-md border border-white/70">
                   <span className="text-[10px] sm:text-xs font-medium tracking-wide text-[#36513A]">
@@ -137,12 +128,10 @@ export default function ProductIntroduction() {
 
           </div>
 
-
           {/* PRODUCT INFORMATION */}
           <div className="lg:col-span-5 flex flex-col justify-center">
 
             <div className="mb-8">
-
               <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#789078]">
                 About the product
               </span>
@@ -159,9 +148,7 @@ export default function ProductIntroduction() {
                 HERBFOOT WARM được phát triển dưới dạng miếng dán
                 thảo mộc riêng biệt, có thể bố trí trực tiếp bên trong giày.
               </p>
-
             </div>
-
 
             {/* PRODUCT SPECS */}
             <div className="grid grid-cols-2 gap-3 mb-8">
@@ -186,7 +173,6 @@ export default function ProductIntroduction() {
 
             </div>
 
-
             {/* FEATURES */}
             <div className="space-y-5">
 
@@ -195,13 +181,11 @@ export default function ProductIntroduction() {
                   key={feature.number}
                   className="flex items-start gap-4 group"
                 >
-
                   <div className="w-11 h-11 shrink-0 rounded-xl bg-[#D5E0D0] border border-[#C3D2BE] flex items-center justify-center text-[#426448] group-hover:bg-[#36543E] group-hover:text-white transition-all duration-300">
                     {feature.icon}
                   </div>
 
                   <div className="flex-1 pt-0.5">
-
                     <div className="flex items-center gap-2">
                       <span className="text-[10px] font-semibold tracking-widest text-[#8B9C86]">
                         {feature.number}
@@ -215,35 +199,27 @@ export default function ProductIntroduction() {
                     <p className="mt-1.5 text-xs sm:text-sm leading-6 text-[#637363]">
                       {feature.desc}
                     </p>
-
                   </div>
-
                 </div>
               ))}
 
             </div>
 
-
             {/* NOTE */}
             <div className="mt-8 pt-6 border-t border-[#C8D4C3] flex items-start gap-3">
-
               <Sparkles className="w-4 h-4 shrink-0 mt-0.5 text-[#789078]" />
 
               <p className="text-[11px] leading-5 text-[#72816F]">
                 Sản phẩm hướng tới mục đích chăm sóc và mang lại trải nghiệm
                 sử dụng tiện lợi, không thay thế các phương pháp điều trị y khoa.
               </p>
-
             </div>
 
           </div>
-
         </div>
-
 
         {/* DIVIDER */}
         <div className="flex items-center gap-5 my-20 sm:my-24">
-
           <div className="h-px flex-1 bg-[#C7D3C1]" />
 
           <div className="w-10 h-10 rounded-full border border-[#B9C9B3] bg-white/60 flex items-center justify-center">
@@ -251,16 +227,13 @@ export default function ProductIntroduction() {
           </div>
 
           <div className="h-px flex-1 bg-[#C7D3C1]" />
-
         </div>
-
 
         {/* HOW TO USE */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
 
           {/* LEFT TITLE */}
           <div className="lg:col-span-4">
-
             <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#789078]">
               Simple application
             </span>
@@ -283,13 +256,10 @@ export default function ProductIntroduction() {
                 Nhanh chóng · Tiện lợi · Linh hoạt
               </span>
             </div>
-
           </div>
-
 
           {/* RIGHT STEPS */}
           <div className="lg:col-span-8">
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
               {steps.map((step, index) => (
@@ -297,9 +267,7 @@ export default function ProductIntroduction() {
                   key={step.num}
                   className="relative p-6 sm:p-7 rounded-3xl bg-[#F7F8F3]/80 border border-[#CFD9C9] hover:bg-white hover:-translate-y-1 hover:shadow-lg hover:shadow-[#294735]/5 transition-all duration-300"
                 >
-
                   <div className="flex items-center justify-between mb-7">
-
                     <span className="font-serif text-4xl text-[#91A68C]/70">
                       {step.num}
                     </span>
@@ -307,7 +275,6 @@ export default function ProductIntroduction() {
                     <div className="w-9 h-9 rounded-full bg-[#E3EBDD] flex items-center justify-center">
                       <ArrowUpRight className="w-4 h-4 text-[#527052]" />
                     </div>
-
                   </div>
 
                   <h4 className="text-base font-semibold text-[#294735]">
@@ -321,12 +288,10 @@ export default function ProductIntroduction() {
                   {index < 3 && (
                     <div className="hidden sm:block absolute -right-2 top-1/2 w-4 h-4 rounded-full bg-[#DCE5D6] border border-[#B9C9B3] z-10" />
                   )}
-
                 </div>
               ))}
 
             </div>
-
           </div>
 
         </div>
