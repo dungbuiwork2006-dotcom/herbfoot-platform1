@@ -11,9 +11,6 @@ export default function BotanicalIngredients() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-[#5C705F] font-semibold bg-[#E4DDD0] px-3.5 py-1.5 rounded-full border border-[#D5CBB9]">
-            Dược Liệu & Nghiên Cứu
-          </span>
           <h2 className="font-serif text-3xl sm:text-4xl text-[#1E3125]">
             Hệ thực vật bản địa trong đề tài nghiên cứu
           </h2>

@@ -9,9 +9,6 @@ export default function QualityAssurance() {
         
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-[#5C705F] font-semibold bg-[#E4DDD0] px-3.5 py-1.5 rounded-full border border-[#D5CBB9]">
-            Kiểm Soát & Thử Nghiệm
-          </span>
           <h2 className="font-serif text-3xl sm:text-4xl text-[#1E3125]">
             Hệ thống kiểm soát chất lượng (Quality Assurance)
           </h2>

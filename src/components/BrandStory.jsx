@@ -18,10 +18,6 @@ export default function BrandStory() {
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-[#5C705F] font-semibold bg-[#E4DDD0] px-3.5 py-1.5 rounded-full border border-[#D5CBB9]">
-            Khởi Nguồn & Sứ Mệnh
-          </span>
-
           <h2 className="font-serif text-3xl sm:text-4xl text-[#1E3125] font-normal leading-tight">
             Từ nỗi niềm của những đôi chân lạnh trong giày kín đến giải pháp thảo mộc bản địa
           </h2>
@@ -35,7 +31,7 @@ export default function BrandStory() {
         {/* Main Botanical Image */}
         <div className="relative mb-14 overflow-hidden rounded-[2rem] border border-[#DFD5C2] shadow-sm">
           <img
-            src="/Herbal Foot Care in Harmony.png"
+            src={`${import.meta.env.BASE_URL}Herbal Foot Care in Harmony.png`}
             alt="HERBFOOT - Chăm sóc bàn chân hài hòa cùng thảo mộc"
             className="w-full h-[280px] sm:h-[380px] lg:h-[440px] object-cover"
           />

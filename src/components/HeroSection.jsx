@@ -39,17 +39,6 @@ export default function HeroSection({ onSearchSerial }) {
 
         <div className="max-w-3xl space-y-6">
 
-          {/* Brand Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E5ECE0]/90 border border-[#CCDBC4] text-[#294638] text-xs font-semibold tracking-wide">
-
-            <Sparkles className="w-3.5 h-3.5 text-[#3F6854]" />
-
-            <span>
-              Dự án Sáng kiến Thảo mộc & Công nghệ Màng Sinh học
-            </span>
-
-          </div>
-
           {/* Main Heading */}
           <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight text-[#1D3025] leading-[1.2]">
             Hơi ấm thảo mộc tự nhiên nâng niu từng bước chân người Việt
