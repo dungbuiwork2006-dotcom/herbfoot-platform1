@@ -20,16 +20,17 @@ export default function ProductionJourney() {
         {/* 5-Stage Timeline Vertical / Stepper */}
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical Connecting Line */}
-          <div className="hidden md:block absolute left-8 top-8 bottom-8 w-0.5 bg-[#D8CCB7]"></div>
+          <div className="hidden md:block absolute left-10 top-10 bottom-10 w-0.5 bg-[#D8CCB7]"></div>
 
           <div className="space-y-8">
             {PRODUCTION_TIMELINE.map((step, idx) => (
               <div key={step.step} className="relative flex flex-col md:flex-row items-start gap-6 group">
                 
-                {/* Step Indicator Badge */}
-                <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#2D4A3E] text-[#F3EFE6] flex flex-col items-center justify-center shrink-0 border-4 border-[#FBF9F5] shadow-md group-hover:bg-[#1E332B] transition-colors">
-                  <span className="text-[10px] uppercase font-mono tracking-wider text-[#A4C4A0]">Giai đoạn</span>
-                  <span className="font-serif text-xl font-bold leading-none">{step.step}</span>
+                {/* Step Number Indicator */}
+                <div className="relative z-10 w-20 h-20 rounded-2xl bg-[#3D5236] text-[#F3EFE6] flex items-center justify-center shrink-0 border-4 border-[#FBF9F5] shadow-md group-hover:bg-[#2F4129] group-hover:scale-105 transition-all duration-300">
+                  <span className="font-serif text-3xl sm:text-4xl font-bold leading-none tracking-tight text-[#E8EFE3] select-none">
+                    {step.step}
+                  </span>
                 </div>
 
                 {/* Step Content Card */}
